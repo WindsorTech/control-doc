@@ -70,7 +70,9 @@ header .menu li a {
   display: inline-block; /* Ensures vertical margin works */
   background-color: #004d40;
   color: white;
-  padding: 0.8rem 1.5rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 0.6rem 1.1rem;
   text-decoration: none;
   border-radius: 5px;
   margin-bottom: 0; /* Removes any space below the button */
@@ -175,13 +177,27 @@ footer {
   position: fixed;
   bottom: 20px;
   right: 20px;
+  width: 60px;
+  height: 60px;
   background-color: #25d366;
   color: white;
   border-radius: 50%;
-  padding: 15px;
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-decoration: none; /* Removes any underline or decoration */
 }
+
+.whatsapp-float i {
+  font-size: 40px; /* Icon size */
+  display: block; /* Prevent inline-level behavior */
+  line-height: 1; /* Remove extra line spacing */
+  text-align: center; /* Center the icon */
+  vertical-align: middle; /* Prevents alignment issues */
+  overflow: hidden; /* Ensures no extra rendering artifacts */
+}
+
 
 .whatsapp-float:hover {
   background-color: #1ebe57;
