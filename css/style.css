@@ -26,6 +26,7 @@ header nav {
 
 header .logo img {
   height: 60px;
+  margin-left: 4rem;
 }
 
 header .menu {
@@ -33,6 +34,7 @@ header .menu {
   display: flex;
   gap: 1rem;
   font-size: 1.3rem;
+  margin-right: 4rem;
 }
 
 
@@ -113,6 +115,11 @@ header .menu li a {
   display: flex;
   justify-content: space-around;
   text-align: center;
+}
+
+.service-box p {
+  width: 75%;
+  margin: auto;
 }
 
 .service-box div {
