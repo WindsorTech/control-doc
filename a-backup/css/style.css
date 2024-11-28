@@ -22,7 +22,6 @@ header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
 }
 
 header .logo img {
@@ -34,13 +33,10 @@ header .menu {
   list-style: none;
   display: flex;
   gap: 1rem;
-  /* font-size: 1.3rem;
-  margin-right: 4rem; */
+  font-size: 1.3rem;
+  margin-right: 4rem;
 }
 
-header .menu li {
-  margin: 0;
-}
 
 header .menu li a {
   text-decoration: none;
@@ -49,40 +45,31 @@ header .menu li a {
   transition: color 0.3s ease; /* Smooth color transition */
 }
 
-header .menu li a:hover {
-  color: #5F9EA0;
-}
-
-.hamburger {
-  display: none;
-  cursor: pointer;
-  font-size: 1.5rem;
-  color: #004d40;
+.menu li a:hover {
+  color: #5F9EA0; /* Change color on hover */
 }
 
 /* Header Content */
 .header-content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: column; /* Ensures vertical stacking */
+  align-items: center; /* Centers content horizontally */
 }
 
 .header-content h1 {
   color: #004d40;
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   margin: 1rem 0;
-  text-align: center;
 }
 
 .header-content p {
   margin: 0.5rem 0;
   font-size: 1.4rem;
-  text-align: center;
 }
 
 .header-content .btn {
-  margin: 1rem 0;
-  display: inline-block;
+  margin: 1rem 0; /* Adds vertical spacing */
+  display: inline-block; /* Ensures vertical margin works */
   background-color: #004d40;
   color: white;
   font-weight: bold;
@@ -90,22 +77,36 @@ header .menu li a:hover {
   padding: 0.6rem 1.1rem;
   text-decoration: none;
   border-radius: 5px;
+  margin-bottom: 0; /* Removes any space below the button */
 }
 
 .header-content .btn:hover {
   background-color: #00796b;
 }
 
+
+/* About Section */
+#about, #services, #contact {
+  padding: 3rem 1.5rem;
+}
+
+#about h2, #contact h2 {
+  text-align: center;
+  color: #004d40;
+  margin-bottom: 1rem;
+}
+
 /* Services Section */
 #services {
-  padding: 3rem 1.5rem;
-  text-align: center;
+  margin-top: 0; /* Removes margin above the section */
+  padding-top: 3rem; /* Removes padding above the section */
 }
 
 #services span {
   font-size: 1.25rem;
   text-align: center;
   color: #004d40;
+  margin-bottom: 1rem;
   font-weight: 600;
 }
 
@@ -113,12 +114,16 @@ header .menu li a:hover {
   margin-top: 1.5rem;
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
   text-align: center;
 }
 
+.service-box p {
+  width: 75%;
+  margin: auto;
+}
+
 .service-box div {
-  flex: 1 1 300px;
+  flex: 1;
   padding: 1rem;
 }
 
@@ -130,19 +135,6 @@ header .menu li a:hover {
 /* Contact Section */
 #contact {
   background-color: #f4f4f4;
-  padding: 3rem 1.5rem;
-}
-
-#contact h2 {
-  text-align: center;
-  color: #004d40;
-  margin-bottom: 1rem;
-}
-
-#contact p {
-  text-align: center;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
 }
 
 form {
@@ -177,6 +169,16 @@ footer {
   padding: 1rem;
 }
 
+#contact {
+  padding: 1rem; /* Optional, adjust padding around the section */
+}
+
+#contact p {
+  text-align: center; /* Centers the text horizontally */
+  margin-bottom: 1rem; /* Adds space below the text if needed */
+  font-size: 1.2rem;
+}
+
 /* WhatsApp Button */
 .whatsapp-float {
   position: fixed;
@@ -191,104 +193,19 @@ footer {
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-decoration: none;
+  text-decoration: none; /* Removes any underline or decoration */
 }
 
 .whatsapp-float i {
-  font-size: 40px;
-  display: block;
-  line-height: 1;
-  text-align: center;
+  font-size: 40px; /* Icon size */
+  display: block; /* Prevent inline-level behavior */
+  line-height: 1; /* Remove extra line spacing */
+  text-align: center; /* Center the icon */
+  vertical-align: middle; /* Prevents alignment issues */
+  overflow: hidden; /* Ensures no extra rendering artifacts */
 }
 
-/* Responsive Design */
 
-/* For tablets (768px and below) */
-@media (max-width: 768px) {
-    .menu {
-    display: none; /* Hide the menu by default on mobile */
-    flex-direction: column; /* Stack items vertically */
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #f4f4f4;
-    width: 100%;
-    padding: 1rem 0;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-
-  .menu li {
-    margin: 1rem 0; /* Add spacing between menu items */
-  }
-
-  .menu.show {
-    display: flex; /* Show menu when toggled */
-  }
-
-  .hamburger {
-    display: block; /* Display the hamburger icon */
-  }
-
-  .header-content h1 {
-    font-size: 2rem;
-  }
-
-  .service-box {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .service-box div {
-    flex: 1 1 100%;
-  }
-
-  form {
-    padding: 1rem;
-  }
-}
-
-/* For mobile devices (480px and below) */
-@media (max-width: 480px) {
-  header {
-    padding: 1rem;
-  }
-
-  header .logo img {
-    height: 50px;
-    margin-left: 0;
-  }
-
-  header .menu {
-    font-size: 1rem;
-  }
-
-  .header-content h1 {
-    font-size: 1.8rem;
-  }
-
-  .header-content p {
-    font-size: 1.2rem;
-  }
-
-  #services span {
-    font-size: 1.1rem;
-  }
-
-  .service-box div {
-    padding: 0.5rem;
-  }
-
-  form input, form textarea, form button {
-    font-size: 0.9rem;
-  }
-
-  .whatsapp-float {
-    width: 50px;
-    height: 50px;
-  }
-
-  .whatsapp-float i {
-    font-size: 30px;
-  }
+.whatsapp-float:hover {
+  background-color: #1ebe57;
 }
