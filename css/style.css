@@ -30,12 +30,11 @@ header .logo img {
   margin-left: 4rem;
 }
 
+/* Menu Styles */
 header .menu {
   list-style: none;
   display: flex;
   gap: 1rem;
-  /* font-size: 1.3rem;
-  margin-right: 4rem; */
 }
 
 header .menu li {
@@ -53,11 +52,13 @@ header .menu li a:hover {
   color: #5F9EA0;
 }
 
+/* Hamburger Menu Icon */
 .hamburger {
-  display: none;
+  display: none; /* Hidden by default on larger screens */
   cursor: pointer;
   font-size: 1.5rem;
   color: #004d40;
+  z-index: 1100; /* Keep it above other elements */
 }
 
 /* Header Content */
@@ -152,7 +153,9 @@ form {
   margin: 0 auto;
 }
 
-form input, form textarea, form button {
+form input,
+form textarea,
+form button {
   margin: 0.5rem 0;
   padding: 0.8rem;
   border: 1px solid #ccc;
@@ -205,29 +208,29 @@ footer {
 
 /* For tablets (768px and below) */
 @media (max-width: 768px) {
-    .menu {
-    display: none; /* Hide the menu by default on mobile */
-    flex-direction: column; /* Stack items vertically */
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #f4f4f4;
-    width: 100%;
-    padding: 1rem 0;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  .hamburger {
+    display: block; /* Display hamburger menu icon */
   }
 
-  .menu li {
-    margin: 1rem 0; /* Add spacing between menu items */
+  .menu {
+    display: none; /* Hide menu by default */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #f4f4f4;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+    text-align: center;
   }
 
   .menu.show {
     display: flex; /* Show menu when toggled */
   }
 
-  .hamburger {
-    display: block; /* Display the hamburger icon */
+  .menu li {
+    margin: 1rem 0; /* Add spacing between menu items */
   }
 
   .header-content h1 {
@@ -279,7 +282,9 @@ footer {
     padding: 0.5rem;
   }
 
-  form input, form textarea, form button {
+  form input,
+  form textarea,
+  form button {
     font-size: 0.9rem;
   }
 
