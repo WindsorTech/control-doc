@@ -22,7 +22,6 @@ header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
 }
 
 header .logo img {
@@ -30,15 +29,12 @@ header .logo img {
   margin-left: 4rem;
 }
 
-/* Menu Styles */
 header .menu {
   list-style: none;
   display: flex;
   gap: 1rem;
-}
-
-header .menu li {
-  margin: 0;
+  font-size: 1.3rem;
+  margin-right: 4rem;
 }
 
 header .menu li a {
@@ -49,7 +45,7 @@ header .menu li a {
 }
 
 header .menu li a:hover {
-  color: #5F9EA0;
+  color: #5F9EA0; /* Change color on hover */
 }
 
 /* Hamburger Menu Icon */
@@ -64,26 +60,24 @@ header .menu li a:hover {
 /* Header Content */
 .header-content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: column; /* Ensures vertical stacking */
+  align-items: center; /* Centers content horizontally */
 }
 
 .header-content h1 {
   color: #004d40;
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   margin: 1rem 0;
-  text-align: center;
 }
 
 .header-content p {
   margin: 0.5rem 0;
   font-size: 1.4rem;
-  text-align: center;
 }
 
 .header-content .btn {
-  margin: 1rem 0;
-  display: inline-block;
+  margin: 1rem 0; /* Adds vertical spacing */
+  display: inline-block; /* Ensures vertical margin works */
   background-color: #004d40;
   color: white;
   font-weight: bold;
@@ -91,22 +85,35 @@ header .menu li a:hover {
   padding: 0.6rem 1.1rem;
   text-decoration: none;
   border-radius: 5px;
+  margin-bottom: 0; /* Removes any space below the button */
 }
 
 .header-content .btn:hover {
   background-color: #00796b;
 }
 
+
+#services, #contact {
+  padding: 3rem 1.5rem;
+}
+
+#contact h2 {
+  text-align: center;
+  color: #004d40;
+  margin-bottom: 1rem;
+}
+
 /* Services Section */
 #services {
-  padding: 3rem 1.5rem;
-  text-align: center;
+  margin-top: 0; /* Removes margin above the section */
+  padding-top: 3rem; /* Removes padding above the section */
 }
 
 #services span {
   font-size: 1.25rem;
   text-align: center;
   color: #004d40;
+  margin-bottom: 1rem;
   font-weight: 600;
 }
 
@@ -114,12 +121,16 @@ header .menu li a:hover {
   margin-top: 1.5rem;
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
   text-align: center;
 }
 
+.service-box p {
+  width: 75%;
+  margin: auto;
+}
+
 .service-box div {
-  flex: 1 1 300px;
+  flex: 1;
   padding: 1rem;
 }
 
@@ -131,19 +142,6 @@ header .menu li a:hover {
 /* Contact Section */
 #contact {
   background-color: #f4f4f4;
-  padding: 3rem 1.5rem;
-}
-
-#contact h2 {
-  text-align: center;
-  color: #004d40;
-  margin-bottom: 1rem;
-}
-
-#contact p {
-  text-align: center;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
 }
 
 form {
@@ -153,9 +151,7 @@ form {
   margin: 0 auto;
 }
 
-form input,
-form textarea,
-form button {
+form input, form textarea, form button {
   margin: 0.5rem 0;
   padding: 0.8rem;
   border: 1px solid #ccc;
@@ -180,6 +176,16 @@ footer {
   padding: 1rem;
 }
 
+#contact {
+  padding: 1rem; /* Optional, adjust padding around the section */
+}
+
+#contact p {
+  text-align: center; /* Centers the text horizontally */
+  margin-bottom: 1rem; /* Adds space below the text if needed */
+  font-size: 1.2rem;
+}
+
 /* WhatsApp Button */
 .whatsapp-float {
   position: fixed;
@@ -194,22 +200,31 @@ footer {
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-decoration: none;
+  text-decoration: none; 
 }
 
 .whatsapp-float i {
-  font-size: 40px;
-  display: block;
-  line-height: 1;
-  text-align: center;
+  font-size: 40px; /* Icon size */
+  display: block; /* Prevent inline-level behavior */
+  line-height: 1; /* Remove extra line spacing */
+  text-align: center; /* Center the icon */
+  vertical-align: middle; /* Prevents alignment issues */
+  overflow: hidden; /* Ensures no extra rendering artifacts */
 }
 
-/* Responsive Design */
+.whatsapp-float:hover {
+  background-color: #1ebe57;
+}
 
-/* For tablets (768px and below) */
+/* Responsive Design For tablets (768px and below) */
+
 @media (max-width: 768px) {
   .hamburger {
     display: block; /* Display hamburger menu icon */
+  }
+
+  #menu {
+    display: none;
   }
 
   .menu {
