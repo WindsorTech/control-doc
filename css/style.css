@@ -320,7 +320,7 @@ footer {
   }
 }
 
-@media (max-width: 768px) and (min-aspect-ratio: 3/2) {
+@media (max-width: 768px) and (orientation: landscape) {
 
   .header-content p { 
       width: 70%;
