@@ -221,6 +221,14 @@ footer {
 /* Responsive Design For tablets (768px and below) */
 
 @media (max-width: 768px) {
+  
+  
+
+  header .logo {
+    margin: 0 auto; /* Automatically center horizontally */
+    text-align: center; /* Ensure inner content is centered */
+  }
+
   .hamburger {
     display: block; /* Display hamburger menu icon */
   }
@@ -246,7 +254,7 @@ footer {
     margin: 1rem 0; /* Add spacing between menu items */
   }
 
-  
+
 
   .header-content h1 {
     font-size: 2rem;
