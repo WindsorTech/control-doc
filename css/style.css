@@ -325,6 +325,10 @@ footer {
   .header-content p { 
       width: 70%;
   }
+
+  #services {
+    width: 100%; 
+  }
   
 }
 
