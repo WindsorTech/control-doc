@@ -329,6 +329,11 @@ footer {
   #services {
     width: 100%; 
   }
+
+  .service-box p {
+    width: 75%;
+    margin: auto;
+  }
   
 }
 
