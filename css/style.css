@@ -218,11 +218,9 @@ footer {
   background-color: #1ebe57;
 }
 
-/* Responsive Design For tablets (768px and below) */
+/************* Responsive Design For tablets (768px and below) ********/
 
-@media (max-width: 768px) {
-  
-  
+@media (max-width: 768px) {  
 
   header .logo {
     margin: 0 auto; /* Automatically center horizontally */
@@ -255,9 +253,9 @@ footer {
   }
 
 
-
-  .header-content h1 {
-    font-size: 2rem;
+  header .header-content h1 {
+    
+    width: 85%;
   }
 
   .service-box {
