@@ -233,6 +233,37 @@ footer {
   background-color: #1ebe57;
 }
 
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Optional: Add slight movement */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* General fade-in class */
+.fade-in {
+  opacity: 0; /* Start fully transparent */
+  animation: fadeIn 1s ease-out forwards; /* Apply fade-in */
+}
+
+/* Delay classes (optional for staggering effects) */
+.fade-in.delay-1 {
+  animation-delay: 0.5s; /* Delays animation start */
+}
+
+.fade-in.delay-2 {
+  animation-delay: 1s;
+}
+
+.fade-in.delay-3 {
+  animation-delay: 1.5s;
+}
+
 /************* Responsive Design For tablets (768px and below) ********/
 
 @media (max-width: 768px) {  
