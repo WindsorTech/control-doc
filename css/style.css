@@ -173,16 +173,24 @@ form input, form textarea, form button {
   padding: 0.8rem;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-family: Arial, sans-serif;
 }
 
 form button {
   background-color: #004d40;
   color: white;
   cursor: pointer;
+  font-size: 1rem;
 }
 
 form button:hover {
   background-color: #00796b;
+}
+
+#formResponse p {
+  color: green;
+  font-weight: bold;
+  text-align: center;
 }
 
 /* Footer */
@@ -249,19 +257,6 @@ footer {
 .fade-in {
   opacity: 0; /* Start fully transparent */
   animation: fadeIn 1s ease-out forwards; /* Apply fade-in */
-}
-
-/* Delay classes (optional for staggering effects) */
-.fade-in.delay-1 {
-  animation-delay: 0.5s; /* Delays animation start */
-}
-
-.fade-in.delay-2 {
-  animation-delay: 1s;
-}
-
-.fade-in.delay-3 {
-  animation-delay: 1.5s;
 }
 
 /************* Responsive Design For tablets (768px and below) ********/
