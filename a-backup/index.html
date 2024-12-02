@@ -3,27 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ControlDoc - Controle Financeiro para Médicos</title>
+  <title>ControlDoc</title>
   <!-- Meta Tag Description -->
-  <meta name="description" content=""> 
+  <meta name="description" content="Controle Financeiro para Médicos">  
   <!-- Favicon Image -->
   <link rel="icon" href="img/control.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+
+  <div class="container">
+
   <header id="home">
-    <nav>
-      <div class="logo">
-        <img src="img/controldoc-logo.png" alt="ControlDoc Logo">
-      </div>
-      <ul class="menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Sistema</a></li>
-        <li><a href="#contact">Contato</a></li>
-      </ul>
-    </nav>
-    <div class="header-content">
+  <nav>
+
+    <div class="logo">
+      <img src="img/controldoc-logo.png" alt="ControlDoc Logo">
+    </div>
+
+    <div class="hamburger" id="hamburger" aria-expanded="false">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Sistema</a></li>
+      <li><a href="#contact">Contato</a></li>
+    </ul>
+
+  </nav>
+
+  <div class="header-content">
       <h1>Controle Financeiro para Médicos</h1>
       <p>Simplifique a gestão de seus pagamentos de planos de saúde com o ControlDoc</p>
       <a href="#contact" class="btn">Entre em Contato</a>
@@ -32,7 +43,9 @@
 
   <section id="services">
     <div style="text-align: center;">
-      <span>O ControlDoc ajuda médicos a garantir que os pagamentos dos planos de saúde sejam feitos corretamente<br>Nossa solução automatiza a conferência, economizando tempo e reduzindo erros financeiros</span>
+      <span>O ControlDoc ajuda médicos a garantir que os pagamentos dos planos de saúde sejam feitos corretamente</span>
+      <br>
+      <span>Nossa solução automatiza a conferência, economizando tempo e reduzindo erros financeiros</span>
     </div>
 
     <div class="service-box">
@@ -50,6 +63,11 @@
         <i class="fas fa-user-shield"></i>
         <h3>Segurança de Dados</h3>
         <p>Proteção total das suas informações e das dos seus pacientes</p>
+      </div>
+      <div>
+        <i class="fas fa-dollar-sign"></i>
+        <h3>Custo-Benefício</h3>
+        <p>Solução acessível que maximiza o retorno sobre seu investimento</p>
       </div>
     </div>
   </section>
@@ -74,5 +92,7 @@
   </a>
 
   <script src="js/script.js"></script>
+
+  </div>
 </body>
 </html>
