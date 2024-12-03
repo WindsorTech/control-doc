@@ -104,12 +104,12 @@
 
                 if (response.ok) {
                   // Show success message
-                  contactMessage.textContent = "Obrigado por entrar em contato, responderemos em breve!";
+                  contactMessage.textContent = "Mensagem enviada com sucesso!";
                   contactMessage.classList.add("success"); 
                   form.reset();
                 } else {
                   // Show error message
-                  contactMessage.textContent = "Ocorreu um erro. Tente novamente mais tarde.";
+                  contactMessage.textContent = "Ocorreu um erro, tente novamente";
                   contactMessage.classList.add("error"); // Add error class for styling
                 }
               });

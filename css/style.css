@@ -207,7 +207,7 @@ form button:hover {
   margin: 0 auto 1rem; /* Centers the message and adds spacing below */
   text-align: center; /* Centers the text inside */
   background-color: #f6fff6; /* Optional: Light green background */
-  max-width: 550px; /* Matches the form's width */
+  max-width: 500px; /* Matches the form's width */
   width: 100%; /* Ensures responsiveness */
   box-sizing: border-box; /* Includes padding in the width calculation */
 }
