@@ -393,6 +393,14 @@ footer {
     width: 75%;
     margin: auto;
   }
+
+    #contactMessage.success {
+    max-width: 90%; /* Limits width to 90% of the viewport */
+  }
+
+  #contactMessage.error {
+    max-width: 90%; /* Limits width to 90% of the viewport */
+  }
   
 }
 
