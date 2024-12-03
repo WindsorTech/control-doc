@@ -195,20 +195,23 @@ form button:hover {
 
 /* Default style */
 #contactMessage {
-  color: #333; /* Default color */
+  
   text-align: center; /* Centers the text horizontally */
   margin-bottom: 1rem; /* Adds space below the text if needed */
   font-size: 1.2rem;
 }
 
-#contact #contactMessage.success {
-  color: green;
+/* Success message */
+#contactMessage.success {
+  color: green; /* Green for success */
+  font-weight: bold;
 }
 
-#contact #contactMessage.error {
-  color: red;
+/* Error message */
+#contactMessage.error {
+  color: red; /* Red for errors */
+  font-weight: bold;
 }
-
 
 
 /* Footer */
