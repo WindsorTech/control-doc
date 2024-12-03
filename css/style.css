@@ -201,17 +201,14 @@ form button:hover {
   font-size: 1.2rem;
 }
 
-/* Success message */
-#contactMessage.success {
-  color: green; /* Green for success */
-  font-weight: bold;
+#contact #contactMessage.success {
+  color: green;
 }
 
-/* Error message */
-#contactMessage.error {
-  color: red; /* Red for errors */
-  font-weight: bold;
+#contact #contactMessage.error {
+  color: red;
 }
+
 
 
 /* Footer */
