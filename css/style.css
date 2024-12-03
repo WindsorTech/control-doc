@@ -199,11 +199,17 @@ form button:hover {
   font-size: 1.2rem;
 }
 
-/* Success message */
 #contactMessage.success {
-  color: green; /* Green for success */
+  color: green; /* Text color */
   font-weight: bold;
+  border: 2px solid green; /* Adds a fine green border */
+  padding: 10px; /* Adds spacing between the border and the text */
+  border-radius: 5px; /* Rounds the corners of the border */
+  margin-bottom: 1rem; /* Keeps spacing consistent */
+  text-align: center; /* Centers the text inside */
+  background-color: #f6fff6; /* Optional: Add a light green background */
 }
+
 
 /* Error message */
 #contactMessage.error {
