@@ -161,6 +161,12 @@ header .menu li a:hover {
   background-color: #f4f4f4;
 }
 
+#contact {
+  padding: 1rem; /* Optional, adjust padding around the section */
+}
+
+
+
 form {
   display: flex;
   flex-direction: column;
@@ -190,16 +196,21 @@ form button:hover {
 /* Default style */
 #contactMessage {
   color: #333; /* Default color */
+  text-align: center; /* Centers the text horizontally */
+  margin-bottom: 1rem; /* Adds space below the text if needed */
+  font-size: 1.2rem;
 }
 
 /* Success message */
 #contactMessage.success {
   color: green; /* Green for success */
+  font-weight: bold;
 }
 
 /* Error message */
 #contactMessage.error {
   color: red; /* Red for errors */
+  font-weight: bold;
 }
 
 
@@ -209,16 +220,6 @@ footer {
   color: white;
   text-align: center;
   padding: 1rem;
-}
-
-#contact {
-  padding: 1rem; /* Optional, adjust padding around the section */
-}
-
-#contact p {
-  text-align: center; /* Centers the text horizontally */
-  margin-bottom: 1rem; /* Adds space below the text if needed */
-  font-size: 1.2rem;
 }
 
 /* WhatsApp Button */
