@@ -201,14 +201,17 @@ form button:hover {
 
 #contactMessage.success {
   color: green; /* Text color */
-  font-weight: bold;
-  border: 2px solid green; /* Adds a fine green border */
-  padding: 10px; /* Adds spacing between the border and the text */
-  border-radius: 5px; /* Rounds the corners of the border */
-  margin-bottom: 1rem; /* Keeps spacing consistent */
+  border: 1px solid green; /* Adds a green border */
+  padding: 10px; /* Adds space inside the border */
+  border-radius: 5px; /* Rounds the corners */
+  margin: 0 auto 1rem; /* Centers the message and adds spacing below */
   text-align: center; /* Centers the text inside */
-  background-color: #f6fff6; /* Optional: Add a light green background */
+  background-color: #f6fff6; /* Optional: Light green background */
+  max-width: 500px; /* Matches the form's width */
+  width: 100%; /* Ensures responsiveness */
+  box-sizing: border-box; /* Includes padding in the width calculation */
 }
+
 
 
 /* Error message */
