@@ -75,12 +75,13 @@
   <section id="contact" class="fade-in">
     <h2>Entre em Contato</h2>
     <p id="contactMessage">Envie uma mensagem ou entre em contato pelo WhatsApp</p>
-      <form action="https://formsubmit.co/gotripps@gmail.com" method="POST">
+      <form action="https://formsubmit.co/97acd11190d03f45b7c9588c07d09ac6" method="POST">
         <input type="text" name="name" placeholder="Nome" required>
         <input type="text" name="email" placeholder="E-mail ou Telefone" required>
         <textarea name="message" placeholder="Mensagem" required></textarea>
         <input type="hidden" name="_captcha" value="true"> <!-- CAPTCHA for spam protection -->
         <input type="hidden" name="_subject" value="Nova Mensagem Control Doc">
+        <input type="hidden" name="_template" value="box">
         <button type="submit">Enviar</button>
       </form>
 
@@ -106,6 +107,17 @@
               contactMessage.textContent = "Ocorreu um erro. Tente novamente mais tarde.";
             }
           });
+
+          if (response.ok) {
+            contactMessage.textContent = "Obrigado por entrar em contato, responderemos em breve!";
+            contactMessage.classList.add("success");
+            contactMessage.classList.remove("error");
+            form.reset();
+          } else {
+            contactMessage.textContent = "Ocorreu um erro. Tente novamente mais tarde.";
+            contactMessage.classList.add("error");
+            contactMessage.classList.remove("success");
+          }
 
         </script>
 
