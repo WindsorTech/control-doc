@@ -107,10 +107,8 @@
                 if (response.ok) {
                   // Show success message
                   contactMessage.textContent = "Obrigado por entrar em contato, responderemos em breve!";
-                  contactMessage.classList.add("success"); // Add success class for styling
-
-                  // Hide the form container
-                  formContainer.style.display = "none";
+                  contactMessage.classList.add("success"); 
+                  formContainer.classList.add("hidden");
                 } else {
                   // Show error message
                   contactMessage.textContent = "Ocorreu um erro. Tente novamente mais tarde.";

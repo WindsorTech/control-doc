@@ -165,7 +165,16 @@ header .menu li a:hover {
   padding: 1rem; /* Optional, adjust padding around the section */
 }
 
+#formContainer {
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth hide animation */
+  height: auto; /* Default height for the form */
+}
 
+#formContainer.hidden {
+  opacity: 0; /* Fade out effect */
+  visibility: hidden; /* Hide content */
+  height: 150px; /* Keeps the space where the form was */
+}
 
 form {
   display: flex;
