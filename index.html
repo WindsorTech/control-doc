@@ -75,6 +75,8 @@
   <section id="contact" class="fade-in">
     <h2>Entre em Contato</h2>
     <p id="contactMessage">Envie uma mensagem ou entre em contato pelo WhatsApp</p>
+
+    <div id="formContainer">
       <form action="https://formsubmit.co/windsorjunior@hotmail.com" method="POST">
         <input type="text" name="name" placeholder="Nome" required>
         <input type="text" name="email" placeholder="E-mail ou Telefone" required>
@@ -84,33 +86,38 @@
         <input type="hidden" name="_template" value="box">
         <button type="submit">Enviar</button>
       </form>
+    </div>
 
         <script>
             document.querySelector("form").addEventListener("submit", async (e) => {
-              e.preventDefault(); // Prevent default form submission
+                e.preventDefault(); // Prevent default form submission
 
-              const form = e.target;
-              const formData = new FormData(form);
+                const form = e.target;
+                const formContainer = document.getElementById("formContainer");
+                const contactMessage = document.getElementById("contactMessage");
 
-              const response = await fetch(form.action, {
-                method: form.method,
-                body: formData,
+                // Send form data
+                const formData = new FormData(form);
+
+                const response = await fetch(form.action, {
+                  method: form.method,
+                  body: formData,
+                });
+
+                if (response.ok) {
+                  // Show success message
+                  contactMessage.textContent = "Obrigado por entrar em contato, responderemos em breve!";
+                  contactMessage.classList.add("success"); // Add success class for styling
+
+                  // Hide the form container
+                  formContainer.style.display = "none";
+                } else {
+                  // Show error message
+                  contactMessage.textContent = "Ocorreu um erro. Tente novamente mais tarde.";
+                  contactMessage.classList.add("error"); // Add error class for styling
+                }
               });
 
-              // Target the paragraph to update
-              const contactMessage = document.getElementById("contactMessage");
-
-              if (response.ok) {
-                contactMessage.textContent = "Obrigado por entrar em contato, responderemos em breve!";
-                contactMessage.classList.add("success"); // Add success class
-                contactMessage.classList.remove("error"); // Remove error class
-                form.reset(); // Clear form fields
-              } else {
-                contactMessage.textContent = "Ocorreu um erro. Tente novamente mais tarde.";
-                contactMessage.classList.add("error"); // Add error class
-                contactMessage.classList.remove("success"); // Remove success class
-              }
-            });
         </script>
 
   </section>
