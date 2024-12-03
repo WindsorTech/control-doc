@@ -215,8 +215,16 @@ form button:hover {
 
 /* Error message */
 #contactMessage.error {
-  color: red; /* Red for errors */
-  font-weight: bold;
+  color: red; /* Text color */
+  border: 1px solid red; /* Adds a green border */
+  padding: 10px; /* Adds space inside the border */
+  border-radius: 5px; /* Rounds the corners */
+  margin: 0 auto 1rem; /* Centers the message and adds spacing below */
+  text-align: center; /* Centers the text inside */
+  background-color: #FFCCCB; /* Optional: Light red background */
+  max-width: 500px; /* Matches the form's width */
+  width: 100%; /* Ensures responsiveness */
+  box-sizing: border-box; /* Includes padding in the width calculation */
 }
 
 
@@ -353,6 +361,14 @@ footer {
     padding: 1rem;
   }
 
+  #contactMessage.success {
+    max-width: 90%; /* Limits width to 90% of the viewport */
+  }
+
+  #contactMessage.error {
+    max-width: 90%; /* Limits width to 90% of the viewport */
+  }
+
   .whatsapp-float {
     width: 55px !important; 
     height: 55px !important;
@@ -416,6 +432,14 @@ footer {
   form textarea,
   form button {
     font-size: 0.9rem;
+  }
+
+  #contactMessage.success {
+    max-width: 90%; /* Limits width to 90% of the viewport */
+  }
+
+  #contactMessage.error {
+    max-width: 90%; /* Limits width to 90% of the viewport */
   }
 
   .whatsapp-float {
