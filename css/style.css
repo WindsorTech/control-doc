@@ -193,7 +193,6 @@ form button:hover {
 
 /* Default style */
 #contactMessage {
-  
   text-align: center; /* Centers the text horizontally */
   margin-bottom: 1rem; /* Adds space below the text if needed */
   font-size: 1.2rem;
@@ -201,6 +200,7 @@ form button:hover {
 
 #contactMessage.success {
   color: green; /* Text color */
+  font-size: 1.1rem;
   border: 1px solid green; /* Adds a green border */
   padding: 10px; /* Adds space inside the border */
   border-radius: 5px; /* Rounds the corners */
@@ -285,6 +285,7 @@ footer {
 }
 
 /************* Responsive Design For tablets (768px and below) ********/
+/**********************************************************************/
 
 @media (max-width: 768px) {  
 
@@ -358,7 +359,7 @@ footer {
   }
 
   form {
-    padding: 1rem;
+    padding: 0 1rem 1rem 1rem; /* Order: top, right, bottom, left */
   }
 
   #contactMessage.success {
@@ -394,14 +395,15 @@ footer {
     margin: auto;
   }
 
-    #contactMessage.success {
-    max-width: 90%; /* Limits width to 90% of the viewport */
-  }
-
-  #contactMessage.error {
-    max-width: 90%; /* Limits width to 90% of the viewport */
+  #contactMessage.success {
+    max-width: 400px; /* Match the form's width */
+    margin: 0 auto 1rem; /* Center horizontally and add spacing */
   }
   
+  #contactMessage.error {
+    max-width: 400px; /* Match the form's width */
+    margin: 0 auto 1rem; /* Center horizontally and add spacing */
+  }
 }
 
 
