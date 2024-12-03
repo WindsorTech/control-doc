@@ -74,21 +74,19 @@
 
   <section id="contact" class="fade-in">
     <h2>Entre em Contato</h2>
-    <p>Envie uma mensagem ou entre em contato pelo WhatsApp</p>
+    <p id="contactMessage">Envie uma mensagem ou entre em contato pelo WhatsApp</p>
       <form action="https://formsubmit.co/gotripps@gmail.com" method="POST">
         <input type="text" name="name" placeholder="Nome" required>
-        <input type="email" name="email" placeholder="E-mail ou Telefone" required>
+        <input type="text" name="email" placeholder="E-mail ou Telefone" required>
         <textarea name="message" placeholder="Mensagem" required></textarea>
         <input type="hidden" name="_captcha" value="true"> <!-- CAPTCHA for spam protection -->
         <input type="hidden" name="_subject" value="Nova Mensagem Control Doc">
         <button type="submit">Enviar</button>
       </form>
 
-      <div id="formResponse" style="margin-top: 1rem;"></div>
-
         <script>
           document.querySelector("form").addEventListener("submit", async (e) => {
-            e.preventDefault(); // Prevent the default form submission
+            e.preventDefault(); // Prevent default form submission
 
             const form = e.target;
             const formData = new FormData(form);
@@ -98,13 +96,17 @@
               body: formData,
             });
 
+            // Target the paragraph to update
+            const contactMessage = document.getElementById("contactMessage");
+
             if (response.ok) {
-              document.getElementById("formResponse").innerHTML = "<p>Obrigado por entrar em contato, responderemos em breve!</p>";
-              form.reset();
+              contactMessage.textContent = "Obrigado por entrar em contato, responderemos em breve!";
+              form.reset(); // Clear form fields
             } else {
-              document.getElementById("formResponse").innerHTML = "<p>Ocorreu um erro. Tente novamente mais tarde.</p>";
+              contactMessage.textContent = "Ocorreu um erro. Tente novamente mais tarde.";
             }
           });
+
         </script>
 
   </section>
