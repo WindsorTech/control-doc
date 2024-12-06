@@ -376,6 +376,10 @@ footer {
     padding: 0 1rem 1rem 1rem; /* Order: top, right, bottom, left */
   }
 
+  form input, form textarea, form button {
+    font-size: 16px; /* Prevents zoom on mobile */
+  }
+
   #contactMessage.success {
     max-width: 90%; /* Limits width to 90% of the viewport */
   }
@@ -411,6 +415,10 @@ footer {
   .service-box p {
     width: 75%;
     margin: auto;
+  }
+
+  form input, form textarea, form button {
+    font-size: 16px; /* Prevents zoom on mobile */
   }
 
   #contactMessage.success {
@@ -464,7 +472,7 @@ footer {
   form input,
   form textarea,
   form button {
-    font-size: 0.9rem;
+    font-size: 16px; /* Prevents zoom on mobile */
   }
 
   #contactMessage.success {
