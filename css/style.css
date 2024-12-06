@@ -416,7 +416,7 @@ footer {
   form input,
   form textarea,
   form button {
-    font-size: 1rem;
+    font-size: 3rem;
   }
 
   #contactMessage.success {
