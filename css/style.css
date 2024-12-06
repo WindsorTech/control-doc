@@ -413,12 +413,6 @@ footer {
     margin: auto;
   }
 
-  form input,
-  form textarea,
-  form button {
-    font-size: 1rem;
-  }
-
   #contactMessage.success {
     max-width: 400px; /* Match the form's width */
     margin: 0 auto 1rem; /* Center horizontally and add spacing */
