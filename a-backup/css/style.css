@@ -161,6 +161,10 @@ header .menu li a:hover {
   background-color: #f4f4f4;
 }
 
+#contact {
+  padding: 1rem; /* Optional, adjust padding around the section */
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -173,17 +177,56 @@ form input, form textarea, form button {
   padding: 0.8rem;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-family: Arial, sans-serif;
 }
 
 form button {
   background-color: #004d40;
   color: white;
   cursor: pointer;
+  font-size: 1rem;
 }
 
 form button:hover {
   background-color: #00796b;
 }
+
+/* Default style */
+#contactMessage {
+  text-align: center; /* Centers the text horizontally */
+  margin-bottom: 1rem; /* Adds space below the text if needed */
+  font-size: 1.2rem;
+}
+
+#contactMessage.success {
+  color: green; /* Text color */
+  font-size: 1.1rem;
+  border: 1px solid green; /* Adds a green border */
+  padding: 10px; /* Adds space inside the border */
+  border-radius: 5px; /* Rounds the corners */
+  margin: 0 auto 1rem; /* Centers the message and adds spacing below */
+  text-align: center; /* Centers the text inside */
+  background-color: #f6fff6; /* Optional: Light green background */
+  max-width: 500px; /* Matches the form's width */
+  width: 100%; /* Ensures responsiveness */
+  box-sizing: border-box; /* Includes padding in the width calculation */
+}
+
+
+/* Error message */
+#contactMessage.error {
+  color: red; /* Text color */
+  border: 1px solid red; /* Adds a green border */
+  padding: 10px; /* Adds space inside the border */
+  border-radius: 5px; /* Rounds the corners */
+  margin: 0 auto 1rem; /* Centers the message and adds spacing below */
+  text-align: center; /* Centers the text inside */
+  background-color: #FFCCCB; /* Optional: Light red background */
+  max-width: 500px; /* Matches the form's width */
+  width: 100%; /* Ensures responsiveness */
+  box-sizing: border-box; /* Includes padding in the width calculation */
+}
+
 
 /* Footer */
 footer {
@@ -191,16 +234,6 @@ footer {
   color: white;
   text-align: center;
   padding: 1rem;
-}
-
-#contact {
-  padding: 1rem; /* Optional, adjust padding around the section */
-}
-
-#contact p {
-  text-align: center; /* Centers the text horizontally */
-  margin-bottom: 1rem; /* Adds space below the text if needed */
-  font-size: 1.2rem;
 }
 
 /* WhatsApp Button */
@@ -233,7 +266,26 @@ footer {
   background-color: #1ebe57;
 }
 
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Optional: Add slight movement */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* General fade-in class */
+.fade-in {
+  opacity: 0; /* Start fully transparent */
+  animation: fadeIn 1s ease-out forwards; /* Apply fade-in */
+}
+
 /************* Responsive Design For tablets (768px and below) ********/
+/**********************************************************************/
 
 @media (max-width: 768px) {  
 
@@ -307,7 +359,15 @@ footer {
   }
 
   form {
-    padding: 1rem;
+    padding: 0 1rem 1rem 1rem; /* Order: top, right, bottom, left */
+  }
+
+  #contactMessage.success {
+    max-width: 90%; /* Limits width to 90% of the viewport */
+  }
+
+  #contactMessage.error {
+    max-width: 90%; /* Limits width to 90% of the viewport */
   }
 
   .whatsapp-float {
@@ -334,7 +394,16 @@ footer {
     width: 75%;
     margin: auto;
   }
+
+  #contactMessage.success {
+    max-width: 400px; /* Match the form's width */
+    margin: 0 auto 1rem; /* Center horizontally and add spacing */
+  }
   
+  #contactMessage.error {
+    max-width: 400px; /* Match the form's width */
+    margin: 0 auto 1rem; /* Center horizontally and add spacing */
+  }
 }
 
 
@@ -373,6 +442,14 @@ footer {
   form textarea,
   form button {
     font-size: 0.9rem;
+  }
+
+  #contactMessage.success {
+    max-width: 90%; /* Limits width to 90% of the viewport */
+  }
+
+  #contactMessage.error {
+    max-width: 90%; /* Limits width to 90% of the viewport */
   }
 
   .whatsapp-float {

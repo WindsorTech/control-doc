@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ControlDoc</title>
+  <title>Control Doc</title>
   <!-- Meta Tag Description -->
   <meta name="description" content="Controle Financeiro para Médicos">  
   <!-- Favicon Image -->
@@ -19,7 +19,7 @@
   <nav>
 
     <div class="logo">
-      <img src="img/controldoc-logo.png" alt="ControlDoc Logo">
+      <a href="index.html"><img src="img/controldoc-logo.png" alt="ControlDoc Logo"></a>
     </div>
 
     <div class="hamburger" id="hamburger" aria-expanded="false">
@@ -28,22 +28,22 @@
 
     <ul class="menu" id="menu">
       <li><a href="#home">Home</a></li>
-      <li><a href="#services">Sistema</a></li>
+      <li><a href="#services">Conheça a Solução</a></li>
       <li><a href="#contact">Contato</a></li>
     </ul>
 
   </nav>
 
-  <div class="header-content">
+  <div class="header-content fade-in">
       <h1>Controle Financeiro para Médicos</h1>
-      <p>Simplifique a gestão de seus pagamentos de planos de saúde com o ControlDoc</p>
+      <p>Simplifique a gestão de seus pagamentos de planos de saúde com o Control Doc</p>
       <a href="#contact" class="btn">Entre em Contato</a>
     </div>
   </header>
 
-  <section id="services">
+  <section id="services" class="fade-in">
     <div style="text-align: center;">
-      <span>O ControlDoc ajuda médicos a garantir que os pagamentos dos planos de saúde sejam feitos corretamente</span>
+      <span>O Control Doc ajuda médicos a garantir que os pagamentos dos planos de saúde sejam feitos corretamente</span>
       <br>
       <span>Nossa solução automatiza a conferência, economizando tempo e reduzindo erros financeiros</span>
     </div>
@@ -72,19 +72,54 @@
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="fade-in">
     <h2>Entre em Contato</h2>
-    <p>Envie uma mensagem ou entre em contato pelo WhatsApp</p>
-    <form>
-      <input type="text" placeholder="Seu Nome" required>
-      <input type="email" placeholder="Seu E-mail" required>
-      <textarea placeholder="Sua Mensagem" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
+    <p id="contactMessage">Envie uma mensagem ou entre em contato pelo WhatsApp</p>
+
+      <form action="https://formsubmit.co/97acd11190d03f45b7c9588c07d09ac6" method="POST">
+        <input type="text" name="name" placeholder="Nome" required>
+        <input type="text" name="email" placeholder="E-mail ou Telefone" required>
+        <textarea name="message" placeholder="Mensagem" required></textarea>
+        <input type="hidden" name="_captcha" value="true"> <!-- CAPTCHA for spam protection -->
+        <input type="hidden" name="_subject" value="Nova Mensagem Control Doc">
+        <input type="hidden" name="_template" value="box">
+        <button type="submit">Enviar</button>
+      </form>
+
+        <script>
+            document.querySelector("form").addEventListener("submit", async (e) => {
+                e.preventDefault(); // Prevent default form submission
+
+                const form = e.target;
+                const formContainer = document.getElementById("formContainer");
+                const contactMessage = document.getElementById("contactMessage");
+
+                // Send form data
+                const formData = new FormData(form);
+
+                const response = await fetch(form.action, {
+                  method: form.method,
+                  body: formData,
+                });
+
+                if (response.ok) {
+                  // Show success message
+                  contactMessage.textContent = "Mensagem enviada com sucesso!";
+                  contactMessage.classList.add("success"); 
+                  form.reset();
+                } else {
+                  // Show error message
+                  contactMessage.textContent = "Ocorreu um erro, tente novamente";
+                  contactMessage.classList.add("error"); // Add error class for styling
+                }
+              });
+
+        </script>
+
   </section>
 
   <footer>
-    <p>&copy; 2024 ControlDoc - Todos os direitos reservados.</p>
+    <p>&copy; 2024 Control Doc - Todos os direitos reservados.</p>
   </footer>
 
   <a href="https://wa.me/+5541995947335" class="whatsapp-float" target="_blank">

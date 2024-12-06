@@ -212,6 +212,20 @@ form button:hover {
   box-sizing: border-box; /* Includes padding in the width calculation */
 }
 
+#contactMessage.sending {
+  color: blue; /* Text color */
+  font-size: 1.1rem;
+  border: 1px solid blue; /* Adds a green border */
+  padding: 10px; /* Adds space inside the border */
+  border-radius: 5px; /* Rounds the corners */
+  margin: 0 auto 1rem; /* Centers the message and adds spacing below */
+  text-align: center; /* Centers the text inside */
+  background-color: #f0f8ff; /* Optional: Light green background */
+  max-width: 500px; /* Matches the form's width */
+  width: 100%; /* Ensures responsiveness */
+  box-sizing: border-box; /* Includes padding in the width calculation */
+}
+
 
 /* Error message */
 #contactMessage.error {
@@ -366,6 +380,10 @@ footer {
     max-width: 90%; /* Limits width to 90% of the viewport */
   }
 
+  #contactMessage.sending {
+    max-width: 90%; /* Limits width to 90% of the viewport */
+  }
+
   #contactMessage.error {
     max-width: 90%; /* Limits width to 90% of the viewport */
   }
@@ -396,6 +414,11 @@ footer {
   }
 
   #contactMessage.success {
+    max-width: 400px; /* Match the form's width */
+    margin: 0 auto 1rem; /* Center horizontally and add spacing */
+  }
+
+  #contactMessage.sending {
     max-width: 400px; /* Match the form's width */
     margin: 0 auto 1rem; /* Center horizontally and add spacing */
   }
@@ -445,6 +468,10 @@ footer {
   }
 
   #contactMessage.success {
+    max-width: 90%; /* Limits width to 90% of the viewport */
+  }
+
+  #contactMessage.sending {
     max-width: 90%; /* Limits width to 90% of the viewport */
   }
 

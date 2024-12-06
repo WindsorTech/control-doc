@@ -1,14 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Form Submission
-  const form = document.querySelector("form");
-  if (form) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      alert("Obrigado por entrar em contato! Responderemos em breve.");
-      form.reset();
-    });
-  }
-
+  
   // Hamburger Menu Toggle
   const hamburger = document.getElementById("hamburger");
   const menu = document.getElementById("menu");
