@@ -298,70 +298,10 @@ footer {
   animation: fadeIn 1s ease-out forwards; /* Apply fade-in */
 }
 
-/****** Responsive Design For mobile devices (480px and below) ********/
+/************* Responsive Design For tablets (768px and below) ********/
 /**********************************************************************/
 
-@media (max-width: 480px) {
-  header {
-    padding: 1rem;
-  }
-
-  header .logo img {
-    height: 50px;
-    margin-left: 0;
-  }
-
-  header .menu {
-    font-size: 1rem;
-  }
-
-  .header-content h1 {
-    font-size: 1.8rem;
-  }
-
-  .header-content p {
-    font-size: 1.2rem;
-  }
-
-  #services span {
-    font-size: 1.1rem;
-  }
-
-  .service-box div {
-    padding: 0.5rem;
-  }
-
-  form input,
-  form textarea,
-  form button {
-    font-size: 0.9rem;
-  }
-
-  #contactMessage.success {
-    max-width: 90%; /* Limits width to 90% of the viewport */
-  }
-
-  #contactMessage.sending {
-    max-width: 90%; /* Limits width to 90% of the viewport */
-  }
-
-  #contactMessage.error {
-    max-width: 90%; /* Limits width to 90% of the viewport */
-  }
-
-  .whatsapp-float {
-    width: 50px;
-    height: 50px;
-  }
-
-  .whatsapp-float i {
-    font-size: 30px;
-  }
-}
-
-/************* Responsive Design For tablets (768px and below) ********/
-
-@media (min-width: 481px) and (max-width: 853px) {  
+@media (max-width: 768px) {  
 
   header .logo {
     margin: 0 auto; /* Automatically center horizontally */
@@ -404,7 +344,7 @@ footer {
   }
 
   header .header-content h1 {
-    width: 75%;
+    width: 85%;
     margin-top: 0rem;
   }
 
@@ -486,5 +426,65 @@ footer {
   #contactMessage.error {
     max-width: 400px; /* Match the form's width */
     margin: 0 auto 1rem; /* Center horizontally and add spacing */
+  }
+}
+
+
+/* For mobile devices (480px and below) */
+@media (max-width: 480px) {
+  header {
+    padding: 1rem;
+  }
+
+  header .logo img {
+    height: 50px;
+    margin-left: 0;
+  }
+
+  header .menu {
+    font-size: 1rem;
+  }
+
+  .header-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .header-content p {
+    font-size: 1.2rem;
+  }
+
+  #services span {
+    font-size: 1.1rem;
+  }
+
+  .service-box div {
+    padding: 0.5rem;
+  }
+
+  form input,
+  form textarea,
+  form button {
+    font-size: 0.9rem;
+  }
+
+  #contactMessage.success {
+    max-width: 90%; /* Limits width to 90% of the viewport */
+  }
+
+  #contactMessage.sending {
+    max-width: 90%; /* Limits width to 90% of the viewport */
+  }
+
+  #contactMessage.error {
+    max-width: 90%; /* Limits width to 90% of the viewport */
+  }
+
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+  }
+
+  .whatsapp-float i {
+    font-size: 30px;
   }
 }
