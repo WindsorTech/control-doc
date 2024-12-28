@@ -452,7 +452,7 @@ header .logo img {
   display: flex; /* Enables flexbox for alignment */
   justify-content: space-between; /* Space between logo and hamburger */
   align-items: center; /* Vertically center logo and hamburger */
-  padding: 0.5rem 15rem; /* Add padding to the left and right */
+  padding: 0.5rem 10rem; /* Add padding to the left and right */
   position: relative; /* Allows fine-tuning of child positioning */
 }
 
