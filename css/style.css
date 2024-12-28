@@ -522,7 +522,7 @@ header .logo img {
    #services span {
     font-size: 1.5rem;
     display: inline-block;
-    
+    margin: 0 auto;
   }
 
   .service-box {
