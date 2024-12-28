@@ -524,6 +524,7 @@ header .logo img {
    #services span {
     font-size: 0.9rem;
     display: block;
+    width: 85%;
     margin: 0 auto;
   }
 
