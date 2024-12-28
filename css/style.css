@@ -390,6 +390,10 @@ header .logo img {
     gap: 1.5rem;
   }
 
+  .service-box h3 {   
+    font-size: 1.1rem;
+   }
+
   .service-box p {
     font-size: 1.05rem;
     width: 90%;
