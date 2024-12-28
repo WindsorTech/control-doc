@@ -519,7 +519,7 @@ header .logo img {
 
    #services span {
     display: block; /* Treat each span as a block element */
-    width: 95%;
+    width: 100%;
     margin: auto;
   }
 
