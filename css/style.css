@@ -391,6 +391,7 @@ header .logo img {
   }
 
   .service-box p {
+    font-size: 1rem;
     width: 80%;
     margin: auto;
   }
