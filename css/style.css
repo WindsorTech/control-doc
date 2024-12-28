@@ -382,7 +382,7 @@ header .logo img {
     font-size: 1.13rem;
     display: block;
     width: 100%;
-    margin-bottom: 0.5rem; /* Add more space below each block */
+    margin-bottom: 0.35rem; /* Add more space below each block */
   }
 
   .service-box {
