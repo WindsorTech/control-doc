@@ -122,13 +122,13 @@ header .menu li a:hover {
 
 /* Services Section */
 #services {
+  text-align: center;
   margin-top: 0; /* Removes margin above the section */
   padding-top: 3rem; /* Removes padding above the section */
 }
 
 #services span {
-  font-size: 1.25rem;
-  text-align: center;
+  font-size: 1.3rem;
   color: #004d40;
   margin-bottom: 1rem;
   font-weight: 600;
@@ -142,7 +142,7 @@ header .menu li a:hover {
 }
 
 .service-box p {
-  width: 90%;
+  width: 95%;
   margin: auto;
 }
 
@@ -375,11 +375,12 @@ header .logo img {
    #services {
     margin-top: -1rem;
     margin-bottom: -1rem;
+    text-align: center;
   }
 
    #services span {
     font-size: 1.1rem;
-    display: block; /* Treat each span as a block element */
+    display: inline-block;
     margin-bottom: -0.5rem; /* Add more space below each block */
   }
 
@@ -515,10 +516,12 @@ header .logo img {
    #services {
     margin-top: -1rem;
     margin-bottom: -1rem;
+    text-align: center;
   }
 
-   .span-title span {
-    font-size: 0.2rem;
+   #services span {
+    font-size: 1.5rem;
+    display: inline-block;
     
   }
 
