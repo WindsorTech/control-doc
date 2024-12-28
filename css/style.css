@@ -518,9 +518,9 @@ header .logo img {
   }
 
    #services span {
-    font-size: 0.1rem;
+    font-size: 0.3rem;
     display: block; /* Treat each span as a block element */
-    width: 100%;
+    width: 80%;
     margin: auto;
   }
 
