@@ -379,10 +379,10 @@ header .logo img {
   }
 
    #services span {
-    font-size: 1.2rem;
+    font-size: 1.18rem;
     display: block;
-    margin-bottom: 0.6rem; /* Add more space below each block */
-    width: 95%;
+    width: 100%;
+    margin-bottom: 0.5rem; /* Add more space below each block */
   }
 
   .service-box {
@@ -523,6 +523,7 @@ header .logo img {
    #services span {
     font-size: 1rem !important;
     display: block;
+    width: 98%;
     margin: 0 auto;
   }
 
